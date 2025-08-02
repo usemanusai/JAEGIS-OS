@@ -2,14 +2,10 @@
   "name": "jaegis-os",
   "version": "1.0.0",
   "description": "AI-Powered Operating System",
-  "main": "jaegis-os-complete.js",
+  "main": "jaegis-os-server.js",
   "scripts": {
-    "start": "node jaegis-os-complete.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node jaegis-os-server.js"
   },
-  "keywords": ["ai", "os", "terminal", "nodejs"],
-  "author": "",
-  "license": "MIT",
   "engines": {
     "node": ">=14.x"
   }
