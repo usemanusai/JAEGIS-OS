@@ -72,7 +72,7 @@ open http://localhost:3000
 ### Unified System Overview
 
 ```mermaid
-graph TB
+flowchart TB
     subgraph "JAEGIS Web OS Desktop Environment"
         WOS[Web OS Desktop<br/>React 18 + Vite<br/>Port 3000]
         WM[Window Manager]
@@ -93,7 +93,7 @@ graph TB
         AUTH --> DEMO
     end
     
-    subgraph "Core Services Layer - Tier 1"
+    subgraph "Core Services Layer"
         SCRIPT[S.C.R.I.P.T.<br/>Port 8080<br/>Configuration]
         ATLAS[A.T.L.A.S.<br/>Port 8081<br/>Resources]
         HELM[H.E.L.M.<br/>Port 8082<br/>Monitoring]
@@ -188,58 +188,19 @@ JAEGIS-OS/
 │   └── contributing.md          # Contribution guidelines
 ├── src/                         # Source code
 │   ├── core/                    # Core JAEGIS systems
-│   │   ├── agents/              # Agent implementations
-│   │   ├── brain_protocol/      # Brain protocol systems
-│   │   ├── intelligence/        # AI intelligence modules
-│   │   ├── orchestration/       # System orchestration
-│   │   └── utils/               # Core utilities
 │   ├── web-os-desktop/          # Web OS desktop environment
-│   │   ├── components/          # React components
-│   │   ├── services/            # Frontend services
-│   │   ├── hooks/               # React hooks
-│   │   └── apps/                # Desktop applications
 │   ├── services/                # Core services (SCRIPT, ATLAS, etc.)
-│   │   ├── script/              # S.C.R.I.P.T. configuration service
-│   │   ├── atlas/               # A.T.L.A.S. resource service
-│   │   ├── helm/                # H.E.L.M. monitoring service
-│   │   ├── mastr/               # M.A.S.T.R. tool forging
-│   │   ├── ascend/              # A.S.C.E.N.D. agent synthesis
-│   │   ├── cori/                # C.O.R.I. cognitive operations
-│   │   └── nlds/                # N.L.D.S. NLP engine
 │   ├── integrations/            # External integrations
-│   │   ├── github/              # GitHub integration
-│   │   ├── mcp/                 # MCP integration
-│   │   ├── openrouter/          # OpenRouter integration
-│   │   └── vscode/              # VSCode integration
 │   └── common/                  # Shared utilities and frameworks
-│       ├── constants/           # System constants
-│       ├── core/                # Common core utilities
-│       ├── frameworks/          # Shared frameworks
-│       ├── models/              # Data models
-│       └── utils/               # Utility functions
 ├── tests/                       # Test suites
 │   ├── unit/                    # Unit tests
 │   ├── integration/             # Integration tests
 │   ├── performance/             # Performance tests
 │   └── setup.js                # Test setup configuration
 ├── config/                      # Configuration files
-│   ├── development.json         # Development configuration
-│   ├── production.json          # Production configuration
-│   └── docker.json              # Docker configuration
 ├── scripts/                     # Build and deployment scripts
-│   ├── build.sh                 # Build script
-│   ├── deploy.sh                # Deployment script
-│   ├── test.sh                  # Test runner script
-│   └── tools/                   # Development tools
 ├── docker/                      # Docker configurations
-│   ├── Dockerfile               # Main Docker image
-│   ├── docker-compose.yml       # Complete ecosystem
-│   ├── nginx.conf               # NGINX configuration
-│   └── init-scripts/            # Initialization scripts
 └── examples/                    # Usage examples and demos
-    ├── basic-usage/             # Basic usage examples
-    ├── advanced-features/       # Advanced feature demos
-    └── api-examples/            # API usage examples
 ```
 
 ---
@@ -249,80 +210,80 @@ JAEGIS-OS/
 ### 7-Tier Architecture
 
 ```mermaid
-graph TD
-    subgraph "Tier 0: Command Center"
-        T0_NLDS[N.L.D.S. Primary<br/>Natural Language Processing<br/>Global Command Coordination<br/>Status: Active | Load: 45%]
+flowchart TD
+    subgraph T0 ["Tier 0: Command Center"]
+        NLDS_PRIMARY["N.L.D.S. Primary<br/>Natural Language Processing<br/>Global Command Coordination<br/>Status: Active - Load: 45%"]
     end
     
-    subgraph "Tier 1: Core Services (7 Agents)"
-        T1_SCRIPT[S.C.R.I.P.T.<br/>Configuration Management<br/>Status: Active | Load: 32%]
-        T1_ATLAS[A.T.L.A.S.<br/>Resource Synchronization<br/>Status: Active | Load: 28%]
-        T1_HELM[H.E.L.M.<br/>Performance Monitoring<br/>Status: Active | Load: 41%]
-        T1_MASTR[M.A.S.T.R.<br/>Tool Forging<br/>Status: Active | Load: 35%]
-        T1_ASCEND[A.S.C.E.N.D.<br/>Agent Synthesis<br/>Status: Active | Load: 39%]
-        T1_CORI[C.O.R.I.<br/>Cognitive Operations<br/>Status: Active | Load: 22%]
-        T1_COCKPIT[JAEGIS Cockpit<br/>System Interface<br/>Status: Active | Load: 18%]
+    subgraph T1 ["Tier 1: Core Services - 7 Agents"]
+        SCRIPT_AGENT["S.C.R.I.P.T.<br/>Configuration Management<br/>Status: Active - Load: 32%"]
+        ATLAS_AGENT["A.T.L.A.S.<br/>Resource Synchronization<br/>Status: Active - Load: 28%"]
+        HELM_AGENT["H.E.L.M.<br/>Performance Monitoring<br/>Status: Active - Load: 41%"]
+        MASTR_AGENT["M.A.S.T.R.<br/>Tool Forging<br/>Status: Active - Load: 35%"]
+        ASCEND_AGENT["A.S.C.E.N.D.<br/>Agent Synthesis<br/>Status: Active - Load: 39%"]
+        CORI_AGENT["C.O.R.I.<br/>Cognitive Operations<br/>Status: Active - Load: 22%"]
+        COCKPIT_AGENT["JAEGIS Cockpit<br/>System Interface<br/>Status: Active - Load: 18%"]
     end
     
-    subgraph "Tier 2: System Agents (4 Agents)"
-        T2_SYS[System Monitor<br/>Resource Tracking]
-        T2_SEC[Security Agent<br/>Access Control]
-        T2_NET[Network Agent<br/>Communication]
-        T2_DATA[Data Agent<br/>Information Management]
+    subgraph T2 ["Tier 2: System Agents - 4 Agents"]
+        SYS_MONITOR["System Monitor<br/>Resource Tracking"]
+        SEC_AGENT["Security Agent<br/>Access Control"]
+        NET_AGENT["Network Agent<br/>Communication"]
+        DATA_AGENT["Data Agent<br/>Information Management"]
     end
     
-    subgraph "Tier 3: Application Agents (3 Agents)"
-        T3_WEB[Web OS Agent<br/>Desktop Environment]
-        T3_API[API Gateway Agent<br/>Service Coordination]
-        T3_UI[UI Coordination Agent<br/>Interface Management]
+    subgraph T3 ["Tier 3: Application Agents - 3 Agents"]
+        WEB_AGENT["Web OS Agent<br/>Desktop Environment"]
+        API_AGENT["API Gateway Agent<br/>Service Coordination"]
+        UI_AGENT["UI Coordination Agent<br/>Interface Management"]
     end
     
-    subgraph "Tier 4: Task Agents (3 Agents)"
-        T4_PROC[Process Agent<br/>Task Execution]
-        T4_SCHED[Scheduler Agent<br/>Task Planning]
-        T4_QUEUE[Queue Agent<br/>Task Management]
+    subgraph T4 ["Tier 4: Task Agents - 3 Agents"]
+        PROC_AGENT["Process Agent<br/>Task Execution"]
+        SCHED_AGENT["Scheduler Agent<br/>Task Planning"]
+        QUEUE_AGENT["Queue Agent<br/>Task Management"]
     end
     
-    subgraph "Tier 5: Utility Agents (3 Agents)"
-        T5_LOG[Logging Agent<br/>Event Recording]
-        T5_CACHE[Cache Agent<br/>Data Optimization]
-        T5_BACKUP[Backup Agent<br/>Data Protection]
+    subgraph T5 ["Tier 5: Utility Agents - 3 Agents"]
+        LOG_AGENT["Logging Agent<br/>Event Recording"]
+        CACHE_AGENT["Cache Agent<br/>Data Optimization"]
+        BACKUP_AGENT["Backup Agent<br/>Data Protection"]
     end
     
-    subgraph "Tier 6: Specialized Agents (3+ Agents)"
-        T6_AI[AI Processing Agent<br/>Machine Learning]
-        T6_NLP[NLP Agent<br/>Language Processing]
-        T6_RESEARCH[Research Agent<br/>Information Gathering]
+    subgraph T6 ["Tier 6: Specialized Agents - 3+ Agents"]
+        AI_AGENT["AI Processing Agent<br/>Machine Learning"]
+        NLP_AGENT["NLP Agent<br/>Language Processing"]
+        RESEARCH_AGENT["Research Agent<br/>Information Gathering"]
     end
     
-    T0_NLDS --> T1_SCRIPT
-    T0_NLDS --> T1_ATLAS
-    T0_NLDS --> T1_HELM
-    T0_NLDS --> T1_MASTR
-    T0_NLDS --> T1_ASCEND
-    T0_NLDS --> T1_CORI
-    T0_NLDS --> T1_COCKPIT
+    NLDS_PRIMARY --> SCRIPT_AGENT
+    NLDS_PRIMARY --> ATLAS_AGENT
+    NLDS_PRIMARY --> HELM_AGENT
+    NLDS_PRIMARY --> MASTR_AGENT
+    NLDS_PRIMARY --> ASCEND_AGENT
+    NLDS_PRIMARY --> CORI_AGENT
+    NLDS_PRIMARY --> COCKPIT_AGENT
     
-    T1_SCRIPT --> T2_SYS
-    T1_ATLAS --> T2_DATA
-    T1_HELM --> T2_SEC
-    T1_MASTR --> T2_NET
+    SCRIPT_AGENT --> SYS_MONITOR
+    ATLAS_AGENT --> DATA_AGENT
+    HELM_AGENT --> SEC_AGENT
+    MASTR_AGENT --> NET_AGENT
     
-    T2_SYS --> T3_WEB
-    T2_SEC --> T3_API
-    T2_NET --> T3_UI
+    SYS_MONITOR --> WEB_AGENT
+    SEC_AGENT --> API_AGENT
+    NET_AGENT --> UI_AGENT
     
-    T3_WEB --> T4_PROC
-    T3_API --> T4_SCHED
-    T3_UI --> T4_QUEUE
+    WEB_AGENT --> PROC_AGENT
+    API_AGENT --> SCHED_AGENT
+    UI_AGENT --> QUEUE_AGENT
     
-    T4_PROC --> T5_LOG
-    T4_SCHED --> T5_CACHE
-    T4_QUEUE --> T5_BACKUP
+    PROC_AGENT --> LOG_AGENT
+    SCHED_AGENT --> CACHE_AGENT
+    QUEUE_AGENT --> BACKUP_AGENT
     
-    T5_LOG --> T6_AI
-    T5_CACHE --> T6_NLP
-    T5_BACKUP --> T6_RESEARCH
+    LOG_AGENT --> AI_AGENT
+    CACHE_AGENT --> NLP_AGENT
+    BACKUP_AGENT --> RESEARCH_AGENT
 ```
 
 **Agent Statistics:**
