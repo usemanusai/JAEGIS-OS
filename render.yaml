@@ -3,7 +3,7 @@ services:
     name: jaegis-os
     env: node
     buildCommand: ""
-    startCommand: node jaegis-os-complete.js
+    startCommand: node jaegis-os-server.js
     envVars:
       - key: NODE_ENV
         value: production
