@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: jaegis-os
+    env: node
+    buildCommand: ""
+    startCommand: node jaegis-os-complete.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheck:
+      path: /
+      interval: 30
+      timeout: 10
+      unhealthyThreshold: 3
+      healthyThreshold: 1
