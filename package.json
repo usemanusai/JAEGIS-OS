@@ -1,12 +1,127 @@
 {
   "name": "jaegis-os",
-  "version": "1.0.0",
-  "description": "AI-Powered Operating System",
-  "main": "jaegis-os-server.js",
-  "scripts": {
-    "start": "node jaegis-os-server.js"
+  "version": "2.2.0",
+  "description": "JAEGIS-OS: AI-Powered Operating System with 7-Tier Agent Hierarchy and Web OS Desktop Environment",
+  "main": "jaegis-os-complete.js",
+  "keywords": [
+    "ai",
+    "operating-system",
+    "web-os",
+    "agents",
+    "nlp",
+    "desktop-environment",
+    "microservices",
+    "docker",
+    "react",
+    "nodejs",
+    "python",
+    "machine-learning",
+    "automation",
+    "productivity"
+  ],
+  "author": {
+    "name": "JAEGIS Team",
+    "email": "use.manus.ai@gmail.com",
+    "url": "https://github.com/usemanusai"
   },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usemanusai/JAEGIS-OS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usemanusai/JAEGIS-OS/issues"
+  },
+  "homepage": "https://github.com/usemanusai/JAEGIS-OS#readme",
   "engines": {
-    "node": ">=14.x"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node jaegis-os-complete.js",
+    "dev": "nodemon jaegis-os-complete.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "build": "npm run build:web && npm run build:services",
+    "build:web": "cd src/web-os-desktop && npm run build",
+    "build:services": "echo 'Building core services...'",
+    "docker:build": "docker build -t jaegis/webos:latest .",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "setup": "npm install && npm run setup:services",
+    "setup:services": "echo 'Setting up core services...'",
+    "health": "curl -f http://localhost:3000/health || exit 1",
+    "docs": "echo 'Generating documentation...'",
+    "clean": "rm -rf node_modules dist build coverage",
+    "precommit": "npm run lint && npm run test:ci"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "winston": "^3.10.0",
+    "redis": "^4.6.7",
+    "pg": "^8.11.1",
+    "socket.io": "^4.7.2",
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.0",
+    "joi": "^17.9.2",
+    "compression": "^1.7.4",
+    "rate-limiter-flexible": "^2.4.2"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/jest": "^29.5.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js",
+      "!src/test/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "testMatch": [
+      "**/tests/**/*.test.js",
+      "**/src/**/*.test.js"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test:ci"
+    }
   }
 }
