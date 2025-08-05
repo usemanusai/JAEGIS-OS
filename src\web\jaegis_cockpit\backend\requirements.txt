@@ -1,0 +1,27 @@
+# JAEGIS Cockpit Backend Requirements
+
+# Core web framework and async support
+fastapi==0.68.0
+uvicorn[standard]==0.15.0
+pydantic==1.10.0
+websockets==10.4
+
+# CORS and middleware
+python-multipart==0.0.6
+
+# Database and storage (using existing S.C.R.I.P.T. SQLite)
+# sqlite3 is built-in to Python, no need to install
+
+# System monitoring
+psutil==5.9.6
+
+# HTTP client for JAEGIS API integration
+aiohttp==3.9.1
+requests==2.31.0
+
+# Logging and utilities
+python-json-logger==2.0.7
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
