@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:22:32.996431",
+    "end_time": "2025-07-30T15:22:43.427131",
+    "total_duration_seconds": 10.430700302124023,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 2.8264527320861816,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: PydanticUserError: `regex` is removed. use `pattern` instead\n\nFor further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:25: in <module>\n    from .models import *\nnlds\\api\\models.py:113: in <module>\n    class TranslationRequest(BaseModel):\nnlds\\api\\models.py:131: in TranslationRequest\n    priority: str = Field(\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1090: in Field\n    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')\nE   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead\nE\nE   For further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:22:35.824656"
+    },
+    "integration": {
+      "success": false,
+      "duration": 1.733625888824463,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: PydanticUserError: `regex` is removed. use `pattern` instead\n\nFor further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:25: in <module>\n    from .models import *\nnlds\\api\\models.py:113: in <module>\n    class TranslationRequest(BaseModel):\nnlds\\api\\models.py:131: in TranslationRequest\n    priority: str = Field(\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1090: in Field\n    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')\nE   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead\nE\nE   For further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:22:37.559098"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.9181227684020996,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: PydanticUserError: `regex` is removed. use `pattern` instead\n\nFor further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:25: in <module>\n    from .models import *\nnlds\\api\\models.py:113: in <module>\n    class TranslationRequest(BaseModel):\nnlds\\api\\models.py:131: in TranslationRequest\n    priority: str = Field(\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1090: in Field\n    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')\nE   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead\nE\nE   For further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:22:39.478256"
+    },
+    "security": {
+      "success": false,
+      "duration": 2.0623464584350586,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: PydanticUserError: `regex` is removed. use `pattern` instead\n\nFor further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:25: in <module>\n    from .models import *\nnlds\\api\\models.py:113: in <module>\n    class TranslationRequest(BaseModel):\nnlds\\api\\models.py:131: in TranslationRequest\n    priority: str = Field(\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1090: in Field\n    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')\nE   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead\nE\nE   For further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:22:41.541460"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 1.8845584392547607,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: PydanticUserError: `regex` is removed. use `pattern` instead\n\nFor further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:25: in <module>\n    from .models import *\nnlds\\api\\models.py:113: in <module>\n    class TranslationRequest(BaseModel):\nnlds\\api\\models.py:131: in TranslationRequest\n    priority: str = Field(\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1090: in Field\n    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')\nE   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead\nE\nE   For further information visit https://errors.pydantic.dev/2.11/u/removed-kwargs\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:22:43.426937"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
