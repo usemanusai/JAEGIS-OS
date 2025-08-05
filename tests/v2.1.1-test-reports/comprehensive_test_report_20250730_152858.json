@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:28:49.100557",
+    "end_time": "2025-07-30T15:28:58.366864",
+    "total_duration_seconds": 9.26630711555481,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.866865873336792,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'jwt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:26: in <module>\n    from .dependencies import get_current_user, get_rate_limiter, verify_api_key\nnlds\\api\\dependencies.py:8: in <module>\n    import jwt\nE   ModuleNotFoundError: No module named 'jwt'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:28:50.969279"
+    },
+    "integration": {
+      "success": false,
+      "duration": 2.151496648788452,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'jwt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:26: in <module>\n    from .dependencies import get_current_user, get_rate_limiter, verify_api_key\nnlds\\api\\dependencies.py:8: in <module>\n    import jwt\nE   ModuleNotFoundError: No module named 'jwt'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:28:53.121587"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.6384670734405518,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'jwt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:26: in <module>\n    from .dependencies import get_current_user, get_rate_limiter, verify_api_key\nnlds\\api\\dependencies.py:8: in <module>\n    import jwt\nE   ModuleNotFoundError: No module named 'jwt'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:28:54.760862"
+    },
+    "security": {
+      "success": false,
+      "duration": 1.7427916526794434,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'jwt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:26: in <module>\n    from .dependencies import get_current_user, get_rate_limiter, verify_api_key\nnlds\\api\\dependencies.py:8: in <module>\n    import jwt\nE   ModuleNotFoundError: No module named 'jwt'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:28:56.504520"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 1.8611886501312256,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'jwt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:26: in <module>\n    from .dependencies import get_current_user, get_rate_limiter, verify_api_key\nnlds\\api\\dependencies.py:8: in <module>\n    import jwt\nE   ModuleNotFoundError: No module named 'jwt'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:28:58.366613"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
