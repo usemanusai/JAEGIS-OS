@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-primary: #6366F1; /* indigo-500 */
+    --color-primary-foreground: #F8FAFC; /* slate-50 */
+    --color-secondary: #8B5CF6; /* violet-500 */
+    --color-secondary-foreground: #F8FAFC; /* slate-50 */
+    --color-accent: #06B6D4; /* cyan-500 */
+    --color-accent-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Background Colors */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #F8FAFC; /* slate-50 */
+    --color-surface: #1E293B; /* slate-800 */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #F8FAFC; /* slate-50 */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Border and Input */
+    --color-border: rgba(148, 163, 184, 0.2); /* slate-400 with opacity */
+    --color-input: #1E293B; /* slate-800 */
+    --color-ring: #6366F1; /* indigo-500 */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #F8FAFC; /* slate-50 */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #0F172A; /* slate-900 */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #F8FAFC; /* slate-50 */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Glassmorphism Variables */
+    --glass-bg: rgba(30, 41, 59, 0.8); /* slate-800 with opacity */
+    --glass-border: rgba(148, 163, 184, 0.1); /* slate-400 with opacity */
+    
+    /* Shadow Variables */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+::-webkit-scrollbar-track  {
+    
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+::-webkit-scrollbar-thumb:hover  {
+    
+  }
+}
+
+@layer components {
+  /* Glassmorphism utility classes */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-strong {
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  /* Window shadow system */
+  .window-shadow {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .window-shadow-focused {
+    box-shadow: var(--shadow-2xl);
+  }
+
+  /* Desktop icon grid */
+  .desktop-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+
+  /* Taskbar styling */
+  .taskbar {
+    @apply glass fixed bottom-0 left-0 right-0 h-16 z-[100] flex items-center px-4;
+  }
+
+  /* Application window base styles */
+  .app-window {
+    @apply absolute bg-surface border border-border rounded-lg overflow-hidden window-shadow;
+    min-width: 320px;
+    min-height: 240px;
+  }
+
+  .app-window.focused {
+    @apply window-shadow-focused;
+  }
+.app-window-header  {
+    @apply border-b border-border h-8 flex items-center justify-between px-3;
+  }
+
+  .app-window-content {
+    @apply p-4 h-full overflow-auto;
+  }
+
+  /* Terminal specific styles */
+  .terminal-content {
+    @apply bg-background text-accent font-mono text-sm p-4 h-full overflow-auto;
+  }
+
+  /* Micro-interaction animations */
+  .hover-scale {
+    @apply transition-transform duration-150 ease-out hover:scale-105;
+  }
+
+  .click-scale {
+    @apply active:scale-95 transition-transform duration-75;
+  }
+
+  /* Focus states */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 150ms ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-up,
+    .animate-scale-in,
+    .hover-scale,
+    .click-scale {
+      animation: none;
+      transition: none;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
