@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:00:18.378620",
+    "end_time": "2025-07-30T15:00:23.928128",
+    "total_duration_seconds": 5.5495076179504395,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.328371524810791,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'redis' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:165: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:61: in <module>\n    from .context_retention import (\nnlds\\cognitive\\context_retention.py:24: in <module>\n    import redis\nE   ModuleNotFoundError: No module named 'redis'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:00:19.708821"
+    },
+    "integration": {
+      "success": false,
+      "duration": 1.351118803024292,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'redis' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:165: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:61: in <module>\n    from .context_retention import (\nnlds\\cognitive\\context_retention.py:24: in <module>\n    import redis\nE   ModuleNotFoundError: No module named 'redis'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:00:21.060716"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.0025253295898438,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'redis' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:165: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:61: in <module>\n    from .context_retention import (\nnlds\\cognitive\\context_retention.py:24: in <module>\n    import redis\nE   ModuleNotFoundError: No module named 'redis'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:00:22.074824"
+    },
+    "security": {
+      "success": false,
+      "duration": 0.929471492767334,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'redis' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:165: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:61: in <module>\n    from .context_retention import (\nnlds\\cognitive\\context_retention.py:24: in <module>\n    import redis\nE   ModuleNotFoundError: No module named 'redis'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:00:23.005185"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 0.9219791889190674,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'redis' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:165: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:61: in <module>\n    from .context_retention import (\nnlds\\cognitive\\context_retention.py:24: in <module>\n    import redis\nE   ModuleNotFoundError: No module named 'redis'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:00:23.927890"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
