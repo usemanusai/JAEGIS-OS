@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T14:01:01.049792",
+    "end_time": "2025-07-30T14:01:05.566401",
+    "total_duration_seconds": 4.516608476638794,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.0137765407562256,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:20: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:44: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:32: in <module>\n    from .intent_recognizer import (\nnlds\\nlp\\intent_recognizer.py:38: in <module>\n    from sklearn.model_selection import train_test_split\nE   ModuleNotFoundError: No module named 'sklearn'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:01:02.065293"
+    },
+    "integration": {
+      "success": false,
+      "duration": 0.9142787456512451,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:20: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:44: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:32: in <module>\n    from .intent_recognizer import (\nnlds\\nlp\\intent_recognizer.py:38: in <module>\n    from sklearn.model_selection import train_test_split\nE   ModuleNotFoundError: No module named 'sklearn'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:01:02.980481"
+    },
+    "performance": {
+      "success": false,
+      "duration": 0.856215238571167,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:20: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:44: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:32: in <module>\n    from .intent_recognizer import (\nnlds\\nlp\\intent_recognizer.py:38: in <module>\n    from sklearn.model_selection import train_test_split\nE   ModuleNotFoundError: No module named 'sklearn'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:01:03.837578"
+    },
+    "security": {
+      "success": false,
+      "duration": 0.797675371170044,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:20: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:44: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:32: in <module>\n    from .intent_recognizer import (\nnlds\\nlp\\intent_recognizer.py:38: in <module>\n    from sklearn.model_selection import train_test_split\nE   ModuleNotFoundError: No module named 'sklearn'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:01:04.636034"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 0.929401159286499,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:20: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:44: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:32: in <module>\n    from .intent_recognizer import (\nnlds\\nlp\\intent_recognizer.py:38: in <module>\n    from sklearn.model_selection import train_test_split\nE   ModuleNotFoundError: No module named 'sklearn'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:01:05.566250"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
