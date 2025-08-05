@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:31:44.844778",
+    "end_time": "2025-07-30T15:31:54.686677",
+    "total_duration_seconds": 9.841898918151855,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.8872699737548828,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'bcrypt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:14: in <module>\n    from .auth import AuthenticationService, UserRole, Permission\nnlds\\api\\auth.py:10: in <module>\n    import bcrypt\nE   ModuleNotFoundError: No module named 'bcrypt'\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:31:46.733631"
+    },
+    "integration": {
+      "success": false,
+      "duration": 2.248110055923462,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'bcrypt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:14: in <module>\n    from .auth import AuthenticationService, UserRole, Permission\nnlds\\api\\auth.py:10: in <module>\n    import bcrypt\nE   ModuleNotFoundError: No module named 'bcrypt'\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:31:48.982543"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.8768651485443115,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'bcrypt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:14: in <module>\n    from .auth import AuthenticationService, UserRole, Permission\nnlds\\api\\auth.py:10: in <module>\n    import bcrypt\nE   ModuleNotFoundError: No module named 'bcrypt'\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:31:50.860716"
+    },
+    "security": {
+      "success": false,
+      "duration": 1.8394649028778076,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'bcrypt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:14: in <module>\n    from .auth import AuthenticationService, UserRole, Permission\nnlds\\api\\auth.py:10: in <module>\n    import bcrypt\nE   ModuleNotFoundError: No module named 'bcrypt'\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:31:52.701029"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 1.9846739768981934,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'bcrypt' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:196: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:14: in <module>\n    from .auth import AuthenticationService, UserRole, Permission\nnlds\\api\\auth.py:10: in <module>\n    import bcrypt\nE   ModuleNotFoundError: No module named 'bcrypt'\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:31:54.686504"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
