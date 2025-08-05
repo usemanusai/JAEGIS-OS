@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:12:10.398812",
+    "end_time": "2025-07-30T15:12:17.494843",
+    "total_duration_seconds": 7.096031665802002,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.1176042556762695,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:208: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:12: in <module>\n    from fastapi.middleware.trustedhost import TrustedHostMiddleware\nE   ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:12:11.518218"
+    },
+    "integration": {
+      "success": false,
+      "duration": 1.5337815284729004,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:208: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:12: in <module>\n    from fastapi.middleware.trustedhost import TrustedHostMiddleware\nE   ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:12:13.053009"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.7446410655975342,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:208: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:12: in <module>\n    from fastapi.middleware.trustedhost import TrustedHostMiddleware\nE   ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:12:14.799045"
+    },
+    "security": {
+      "success": false,
+      "duration": 1.4587633609771729,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:208: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:12: in <module>\n    from fastapi.middleware.trustedhost import TrustedHostMiddleware\nE   ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:12:16.258795"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 1.2347803115844727,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:208: in <module>\n    from nlds.api import create_nlds_api, create_test_client\nnlds\\api\\__init__.py:12: in <module>\n    from .main import app\nnlds\\api\\main.py:12: in <module>\n    from fastapi.middleware.trustedhost import TrustedHostMiddleware\nE   ModuleNotFoundError: No module named 'fastapi.middleware.trustedhost'; 'fastapi.middleware' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:12:17.494604"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
