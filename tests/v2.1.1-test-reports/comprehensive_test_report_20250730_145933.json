@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T14:59:27.606498",
+    "end_time": "2025-07-30T14:59:33.649831",
+    "total_duration_seconds": 6.043332099914551,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.094054937362671,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:164: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:48: in <module>\n    from .user_learning import (\nnlds\\cognitive\\user_learning.py:22: in <module>\n    from sklearn.preprocessing import StandardScaler\nE   ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:59:28.702035"
+    },
+    "integration": {
+      "success": false,
+      "duration": 1.2631561756134033,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:164: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:48: in <module>\n    from .user_learning import (\nnlds\\cognitive\\user_learning.py:22: in <module>\n    from sklearn.preprocessing import StandardScaler\nE   ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:59:29.966004"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.5926852226257324,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:164: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:48: in <module>\n    from .user_learning import (\nnlds\\cognitive\\user_learning.py:22: in <module>\n    from sklearn.preprocessing import StandardScaler\nE   ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:59:31.559574"
+    },
+    "security": {
+      "success": false,
+      "duration": 0.9550740718841553,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:164: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:48: in <module>\n    from .user_learning import (\nnlds\\cognitive\\user_learning.py:22: in <module>\n    from sklearn.preprocessing import StandardScaler\nE   ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:59:32.515528"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 1.1328818798065186,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:164: in <module>\n    from nlds.integration import NLDSIntegrationOrchestrator, get_default_integration_config\nnlds\\integration\\__init__.py:15: in <module>\n    from .jaegis_orchestrator import (\nnlds\\integration\\jaegis_orchestrator.py:24: in <module>\n    from ..translation.command_generator import JAEGISCommand, CommandGenerationResult\nnlds\\translation\\__init__.py:9: in <module>\n    from .command_generator import (\nnlds\\translation\\command_generator.py:24: in <module>\n    from ..cognitive.cognitive_model import CognitiveDecision\nnlds\\cognitive\\__init__.py:48: in <module>\n    from .user_learning import (\nnlds\\cognitive\\user_learning.py:22: in <module>\n    from sklearn.preprocessing import StandardScaler\nE   ModuleNotFoundError: No module named 'sklearn.preprocessing'; 'sklearn' is not a package\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:59:33.649653"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
