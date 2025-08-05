@@ -1,0 +1,315 @@
+# Docker Compose for Complete JAEGIS Ecosystem
+version: '3.8'
+
+services:
+  # JAEGIS Web OS (Main Frontend)
+  webos:
+    build: .
+    container_name: jaegis-webos
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_BASE_URL=http://localhost:8000
+      - REACT_APP_SCRIPT_URL=http://localhost:8080
+      - REACT_APP_ATLAS_URL=http://localhost:8081
+      - REACT_APP_HELM_URL=http://localhost:8082
+      - REACT_APP_MASTR_URL=http://localhost:8083
+      - REACT_APP_ASCEND_URL=http://localhost:8084
+      - REACT_APP_CORI_URL=http://localhost:8085
+      - REACT_APP_COCKPIT_URL=http://localhost:8090
+      - WAIT_FOR_SERVICES=true
+    depends_on:
+      - nlds
+      - script
+      - atlas
+      - helm
+      - mastr
+      - ascend
+      - cori
+      - cockpit
+      - redis
+      - postgres
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # N.L.D.S. Service (Port 8000)
+  nlds:
+    image: jaegis/nlds:latest
+    container_name: jaegis-nlds
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/nlds
+      - REDIS_URL=redis://redis:6379/0
+      - LOG_LEVEL=info
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # S.C.R.I.P.T. Service (Port 8080)
+  script:
+    image: jaegis/script:latest
+    container_name: jaegis-script
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/script
+      - REDIS_URL=redis://redis:6379/1
+      - CONFIG_PATH=/app/config
+    volumes:
+      - script-config:/app/config
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # A.T.L.A.S. Service (Port 8081)
+  atlas:
+    image: jaegis/atlas:latest
+    container_name: jaegis-atlas
+    ports:
+      - "8081:8081"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/atlas
+      - REDIS_URL=redis://redis:6379/2
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # H.E.L.M. Service (Port 8082)
+  helm:
+    image: jaegis/helm:latest
+    container_name: jaegis-helm
+    ports:
+      - "8082:8082"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/helm
+      - REDIS_URL=redis://redis:6379/3
+      - METRICS_RETENTION_DAYS=30
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # M.A.S.T.R. Service (Port 8083)
+  mastr:
+    image: jaegis/mastr:latest
+    container_name: jaegis-mastr
+    ports:
+      - "8083:8083"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/mastr
+      - REDIS_URL=redis://redis:6379/4
+      - TOOL_REGISTRY_PATH=/app/tools
+    volumes:
+      - mastr-tools:/app/tools
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8083/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # A.S.C.E.N.D. Service (Port 8084)
+  ascend:
+    image: jaegis/ascend:latest
+    container_name: jaegis-ascend
+    ports:
+      - "8084:8084"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/ascend
+      - REDIS_URL=redis://redis:6379/5
+      - AGENT_REGISTRY_PATH=/app/agents
+    volumes:
+      - ascend-agents:/app/agents
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8084/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # C.O.R.I. Service (Port 8085)
+  cori:
+    image: jaegis/cori:latest
+    container_name: jaegis-cori
+    ports:
+      - "8085:8085"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/cori
+      - REDIS_URL=redis://redis:6379/6
+      - HTM_MODEL_PATH=/app/models
+    volumes:
+      - cori-models:/app/models
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8085/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # JAEGIS Cockpit (Port 8090)
+  cockpit:
+    image: jaegis/cockpit:latest
+    container_name: jaegis-cockpit
+    ports:
+      - "8090:8090"
+    environment:
+      - DATABASE_URL=postgresql://jaegis:jaegis@postgres:5432/cockpit
+      - REDIS_URL=redis://redis:6379/7
+      - WEBOS_URL=http://webos:80
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: jaegis-postgres
+    environment:
+      - POSTGRES_DB=jaegis
+      - POSTGRES_USER=jaegis
+      - POSTGRES_PASSWORD=jaegis
+      - POSTGRES_MULTIPLE_DATABASES=nlds,script,atlas,helm,mastr,ascend,cori,cockpit
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-databases.sql:/docker-entrypoint-initdb.d/init-databases.sql
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jaegis"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: jaegis-redis
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis-data:/data
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Monitoring with Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: jaegis-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+
+  # Grafana for Visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: jaegis-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=jaegis
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - prometheus
+    networks:
+      - jaegis-network
+    restart: unless-stopped
+
+networks:
+  jaegis-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  postgres-data:
+  redis-data:
+  script-config:
+  mastr-tools:
+  ascend-agents:
+  cori-models:
+  prometheus-data:
+  grafana-data:
