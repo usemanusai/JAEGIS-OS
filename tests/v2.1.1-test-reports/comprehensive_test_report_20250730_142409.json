@@ -1,0 +1,78 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T14:24:04.909527",
+    "end_time": "2025-07-30T14:24:09.901765",
+    "total_duration_seconds": 4.992238759994507,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 0,
+    "passed_tests": 0,
+    "failed_tests": 0,
+    "success_rate": 0,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 1.065567970275879,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'nltk' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:82: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:26: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:14: in <module>\n    from .tokenizer import (\nnlds\\nlp\\tokenizer.py:17: in <module>\n    import nltk\nE   ModuleNotFoundError: No module named 'nltk'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:24:05.976850"
+    },
+    "integration": {
+      "success": false,
+      "duration": 1.0191583633422852,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'nltk' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:82: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:26: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:14: in <module>\n    from .tokenizer import (\nnlds\\nlp\\tokenizer.py:17: in <module>\n    import nltk\nE   ModuleNotFoundError: No module named 'nltk'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:24:06.996791"
+    },
+    "performance": {
+      "success": false,
+      "duration": 1.0173895359039307,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'nltk' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:82: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:26: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:14: in <module>\n    from .tokenizer import (\nnlds\\nlp\\tokenizer.py:17: in <module>\n    import nltk\nE   ModuleNotFoundError: No module named 'nltk'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:24:08.016241"
+    },
+    "security": {
+      "success": false,
+      "duration": 0.9165773391723633,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'nltk' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:82: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:26: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:14: in <module>\n    from .tokenizer import (\nnlds\\nlp\\tokenizer.py:17: in <module>\n    import nltk\nE   ModuleNotFoundError: No module named 'nltk'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:24:08.933585"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 0.9671266078948975,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nConftestImportFailure: ModuleNotFoundError: No module named 'nltk' (from C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py)\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nImportError while loading conftest 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\conftest.py'.\ntests\\conftest.py:82: in <module>\n    from nlds.processing import ProcessingOrchestrator\nnlds\\processing\\__init__.py:14: in <module>\n    from .logical_analyzer import (\nnlds\\processing\\logical_analyzer.py:26: in <module>\n    from ..nlp.tokenizer import TokenizationResult\nnlds\\nlp\\__init__.py:14: in <module>\n    from .tokenizer import (\nnlds\\nlp\\tokenizer.py:17: in <module>\n    import nltk\nE   ModuleNotFoundError: No module named 'nltk'\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T12:24:09.901550"
+    }
+  },
+  "quality_metrics": {},
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
