@@ -1,0 +1,1282 @@
+{
+  "test_execution": {
+    "start_time": "2025-07-30T15:49:29.589276",
+    "end_time": "2025-07-30T15:49:41.811986",
+    "total_duration_seconds": 12.222710371017456,
+    "categories_run": [
+      "unit",
+      "integration",
+      "performance",
+      "security",
+      "acceptance"
+    ]
+  },
+  "test_summary": {
+    "total_tests": 15,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "success_rate": 6.666666666666667,
+    "categories": 5
+  },
+  "category_results": {
+    "unit": {
+      "success": false,
+      "duration": 2.014291286468506,
+      "return_code": 4,
+      "stdout": "",
+      "stderr": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.\nPlugin: helpconfig, Hook: pytest_cmdline_parse\nUsageError: usage: __main__.py [options] [file_or_dir] [file_or_dir] [...]\n__main__.py: error: unrecognized arguments: --cov=nlds --cov-report=html:test_reports/coverage_html --cov-report=json:test_reports/coverage.json --cov-fail-under=90.0\n  inifile: None\n  rootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\nFor more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning\n  config = pluginmanager.hook.pytest_cmdline_parse(\nINFO:nlds.api:N.L.D.S. API Module v2.2.0 loaded successfully\nERROR: usage: __main__.py [options] [file_or_dir] [file_or_dir] [...]\n__main__.py: error: unrecognized arguments: --cov=nlds --cov-report=html:test_reports/coverage_html --cov-report=json:test_reports/coverage.json --cov-fail-under=90.0\n  inifile: None\n  rootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\n\n<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {},
+      "timestamp": "2025-07-30T13:49:31.605471"
+    },
+    "integration": {
+      "success": false,
+      "duration": 2.4427154064178467,
+      "return_code": 2,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.3, pytest-7.4.3, pluggy-1.6.0 -- C:\\Python313\\python.exe\ncachedir: .pytest_cache\nmetadata: {'Python': '3.13.3', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.9.0', 'asyncio': '0.21.1', 'json-report': '1.5.0', 'metadata': '3.1.1', 'mock': '3.12.0', 'timeout': '2.2.0'}, 'JAVA_HOME': 'C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.7.6-hotspot\\\\'}\nrootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\nplugins: anyio-4.9.0, asyncio-0.21.1, json-report-1.5.0, metadata-3.1.1, mock-3.12.0, timeout-2.2.0\nasyncio: mode=Mode.STRICT\ntimeout: 600.0s\ntimeout method: thread\ntimeout func_only: False\ncollecting ... collected 0 items / 2 errors\n\n=================================== ERRORS ====================================\n_________ ERROR collecting tests/integration/test_external_systems.py _________\nImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\integration\\test_external_systems.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\integration\\test_external_systems.py:18: in <module>\n    import asyncpg\nE   ModuleNotFoundError: No module named 'asyncpg'\n------------------------------- Captured stderr -------------------------------\nINFO:nlds.api:N.L.D.S. API Module v2.2.0 loaded successfully\n_________ ERROR collecting tests/integration/test_nlds_integration.py _________\nImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\integration\\test_nlds_integration.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\integration\\test_nlds_integration.py:17: in <module>\n    from nlds.processing import ProcessingOrchestrator\nE   ImportError: cannot import name 'ProcessingOrchestrator' from 'nlds.processing' (C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\processing\\__init__.py)\n============================== warnings summary ===============================\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warn(\n\nnlds\\api\\models.py:82\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py:82: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    @validator('input_text')\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373: UserWarning: Valid config keys have changed in V2:\n  * 'schema_extra' has been renamed to 'json_schema_extra'\n    warnings.warn(message, UserWarning)\n\nnlds\\api\\main.py:667\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py:667: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    @app.on_event(\"startup\")\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    return self.router.on_event(event_type)\n\nnlds\\api\\auth.py:167\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:167: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:180\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:180: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:193\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:193: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: test_reports/integration_report.json\n=========================== short test summary info ===========================\nERROR tests/integration/test_external_systems.py\nERROR tests/integration/test_nlds_integration.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!\n======================= 13 warnings, 2 errors in 0.26s ========================\n",
+      "stderr": "<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {
+        "created": 1753883373.9194221,
+        "duration": 0.25893378257751465,
+        "exitcode": 2,
+        "root": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1",
+        "environment": {},
+        "summary": {
+          "total": 0,
+          "collected": 0
+        },
+        "collectors": [
+          {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/integration/test_external_systems.py",
+                "type": "Module"
+              },
+              {
+                "nodeid": "tests/integration/test_nlds_integration.py",
+                "type": "Module"
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/integration/test_external_systems.py",
+            "outcome": "failed",
+            "result": [],
+            "longrepr": "ImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\integration\\test_external_systems.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\integration\\test_external_systems.py:18: in <module>\n    import asyncpg\nE   ModuleNotFoundError: No module named 'asyncpg'"
+          },
+          {
+            "nodeid": "tests/integration/test_nlds_integration.py",
+            "outcome": "failed",
+            "result": [],
+            "longrepr": "ImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\integration\\test_nlds_integration.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\integration\\test_nlds_integration.py:17: in <module>\n    from nlds.processing import ProcessingOrchestrator\nE   ImportError: cannot import name 'ProcessingOrchestrator' from 'nlds.processing' (C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\processing\\__init__.py)"
+          }
+        ],
+        "tests": [],
+        "warnings": [
+          {
+            "message": "Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py",
+            "lineno": 1093
+          },
+          {
+            "message": "Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py",
+            "lineno": 82
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Valid config keys have changed in V2:\n* 'schema_extra' has been renamed to 'json_schema_extra'",
+            "category": "UserWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 373
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py",
+            "lineno": 667
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py",
+            "lineno": 4495
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 167
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 180
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 193
+          }
+        ]
+      },
+      "timestamp": "2025-07-30T13:49:34.069294"
+    },
+    "performance": {
+      "success": false,
+      "duration": 2.551901340484619,
+      "return_code": 2,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.3, pytest-7.4.3, pluggy-1.6.0 -- C:\\Python313\\python.exe\ncachedir: .pytest_cache\nmetadata: {'Python': '3.13.3', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.9.0', 'asyncio': '0.21.1', 'json-report': '1.5.0', 'metadata': '3.1.1', 'mock': '3.12.0', 'timeout': '2.2.0'}, 'JAVA_HOME': 'C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.7.6-hotspot\\\\'}\nrootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\nplugins: anyio-4.9.0, asyncio-0.21.1, json-report-1.5.0, metadata-3.1.1, mock-3.12.0, timeout-2.2.0\nasyncio: mode=Mode.STRICT\ntimeout: 1800.0s\ntimeout method: thread\ntimeout func_only: False\ncollecting ... collected 6 items / 1 error\n\n=================================== ERRORS ====================================\n______ ERROR collecting tests/performance/test_performance_benchmarks.py ______\nImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\performance\\test_performance_benchmarks.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\performance\\test_performance_benchmarks.py:22: in <module>\n    from nlds.processing import ProcessingOrchestrator\nE   ImportError: cannot import name 'ProcessingOrchestrator' from 'nlds.processing' (C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\processing\\__init__.py)\n============================== warnings summary ===============================\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warn(\n\nnlds\\api\\models.py:82\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py:82: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    @validator('input_text')\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373: UserWarning: Valid config keys have changed in V2:\n  * 'schema_extra' has been renamed to 'json_schema_extra'\n    warnings.warn(message, UserWarning)\n\nnlds\\api\\main.py:667\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py:667: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    @app.on_event(\"startup\")\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    return self.router.on_event(event_type)\n\nnlds\\api\\auth.py:167\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:167: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:180\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:180: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:193\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:193: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: test_reports/performance_report.json\n=========================== short test summary info ===========================\nERROR tests/performance/test_performance_benchmarks.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n======================== 13 warnings, 1 error in 0.25s ========================\n",
+      "stderr": "<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {
+        "created": 1753883376.4944687,
+        "duration": 0.25685715675354004,
+        "exitcode": 2,
+        "root": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1",
+        "environment": {},
+        "summary": {
+          "total": 0,
+          "collected": 6
+        },
+        "collectors": [
+          {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/performance/test_load_stress.py",
+                "type": "Module"
+              },
+              {
+                "nodeid": "tests/performance/test_performance_benchmarks.py",
+                "type": "Module"
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/performance/test_load_stress.py::TestLoadTesting",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestLoadTesting::test_sustained_high_load",
+                "type": "Function",
+                "lineno": 159
+              },
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestLoadTesting::test_burst_load_handling",
+                "type": "Function",
+                "lineno": 226
+              },
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestLoadTesting::test_api_load_testing",
+                "type": "Function",
+                "lineno": 284
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/performance/test_load_stress.py::TestStressTesting",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestStressTesting::test_memory_stress",
+                "type": "Function",
+                "lineno": 360
+              },
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestStressTesting::test_connection_stress",
+                "type": "Function",
+                "lineno": 415
+              },
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestStressTesting::test_error_cascade_resilience",
+                "type": "Function",
+                "lineno": 479
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/performance/test_load_stress.py",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestLoadTesting",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/performance/test_load_stress.py::TestStressTesting",
+                "type": "Class"
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/performance/test_performance_benchmarks.py",
+            "outcome": "failed",
+            "result": [],
+            "longrepr": "ImportError while importing test module 'C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\performance\\test_performance_benchmarks.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Python313\\Lib\\importlib\\__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\ntests\\performance\\test_performance_benchmarks.py:22: in <module>\n    from nlds.processing import ProcessingOrchestrator\nE   ImportError: cannot import name 'ProcessingOrchestrator' from 'nlds.processing' (C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\processing\\__init__.py)"
+          }
+        ],
+        "tests": [],
+        "warnings": [
+          {
+            "message": "Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py",
+            "lineno": 1093
+          },
+          {
+            "message": "Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py",
+            "lineno": 82
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Valid config keys have changed in V2:\n* 'schema_extra' has been renamed to 'json_schema_extra'",
+            "category": "UserWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 373
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py",
+            "lineno": 667
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py",
+            "lineno": 4495
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 167
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 180
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 193
+          }
+        ]
+      },
+      "timestamp": "2025-07-30T13:49:36.636247"
+    },
+    "security": {
+      "success": false,
+      "duration": 2.707033157348633,
+      "return_code": 1,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.3, pytest-7.4.3, pluggy-1.6.0 -- C:\\Python313\\python.exe\ncachedir: .pytest_cache\nmetadata: {'Python': '3.13.3', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.9.0', 'asyncio': '0.21.1', 'json-report': '1.5.0', 'metadata': '3.1.1', 'mock': '3.12.0', 'timeout': '2.2.0'}, 'JAVA_HOME': 'C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.7.6-hotspot\\\\'}\nrootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\nplugins: anyio-4.9.0, asyncio-0.21.1, json-report-1.5.0, metadata-3.1.1, mock-3.12.0, timeout-2.2.0\nasyncio: mode=Mode.STRICT\ntimeout: 900.0s\ntimeout method: thread\ntimeout func_only: False\ncollecting ... collected 15 items\n\ntests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_sql_injection_protection ERROR [  6%]\ntests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_xss_protection ERROR [ 13%]\ntests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_command_injection_protection ERROR [ 20%]\ntests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_path_traversal_protection ERROR [ 26%]\ntests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_ldap_injection_protection ERROR [ 33%]\ntests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_jwt_token_security ERROR [ 40%]\ntests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_password_security ERROR [ 46%]\ntests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_session_security ERROR [ 53%]\ntests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_authorization_bypass ERROR [ 60%]\ntests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity::test_rate_limit_bypass ERROR [ 66%]\ntests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_sensitive_data_exposure ERROR [ 73%]\ntests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_information_disclosure ERROR [ 80%]\ntests/security/test_security_vulnerabilities.py::TestSecurityHeaders::test_security_headers_presence ERROR [ 86%]\ntests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_comprehensive_security_assessment PASSED [ 93%]\ntests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_penetration_testing_simulation ERROR [100%]\n\n=================================== ERRORS ====================================\n_ ERROR at setup of TestInputValidationSecurity.test_sql_injection_protection _\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx\n______ ERROR at setup of TestInputValidationSecurity.test_xss_protection ______\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx\n_ ERROR at setup of TestInputValidationSecurity.test_command_injection_protection _\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx\n_ ERROR at setup of TestInputValidationSecurity.test_path_traversal_protection _\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx\n_ ERROR at setup of TestInputValidationSecurity.test_ldap_injection_protection _\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx\n____ ERROR at setup of TestAuthenticationSecurity.test_jwt_token_security _____\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 305\n      def test_jwt_token_security(self, security_framework):\nE       fixture 'security_framework' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:305\n_____ ERROR at setup of TestAuthenticationSecurity.test_password_security _____\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 367\n      def test_password_security(self, security_framework):\nE       fixture 'security_framework' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:367\n_____ ERROR at setup of TestAuthenticationSecurity.test_session_security ______\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 400\n      def test_session_security(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:400\n___ ERROR at setup of TestAuthenticationSecurity.test_authorization_bypass ____\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 431\n      def test_authorization_bypass(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:431\n______ ERROR at setup of TestRateLimitingSecurity.test_rate_limit_bypass ______\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 477\n      def test_rate_limit_bypass(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:477\n__ ERROR at setup of TestDataProtectionSecurity.test_sensitive_data_exposure __\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 535\n      def test_sensitive_data_exposure(self, api_client, auth_headers, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:535\n__ ERROR at setup of TestDataProtectionSecurity.test_information_disclosure ___\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 566\n      def test_information_disclosure(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:566\n____ ERROR at setup of TestSecurityHeaders.test_security_headers_presence _____\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 619\n      def test_security_headers_presence(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:619\n_ ERROR at setup of TestSecurityIntegration.test_penetration_testing_simulation _\nfile C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 713\n      @pytest.mark.security\n      @pytest.mark.slow\n      def test_penetration_testing_simulation(self, api_client):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:713\n============================== warnings summary ===============================\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warn(\n\nnlds\\api\\models.py:82\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py:82: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    @validator('input_text')\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373: UserWarning: Valid config keys have changed in V2:\n  * 'schema_extra' has been renamed to 'json_schema_extra'\n    warnings.warn(message, UserWarning)\n\nnlds\\api\\main.py:667\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py:667: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    @app.on_event(\"startup\")\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    return self.router.on_event(event_type)\n\nnlds\\api\\auth.py:167\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:167: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:180\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:180: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:193\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:193: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: test_reports/security_report.json\n=========================== short test summary info ===========================\nERROR tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_sql_injection_protection\nERROR tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_xss_protection\nERROR tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_command_injection_protection\nERROR tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_path_traversal_protection\nERROR tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_ldap_injection_protection\nERROR tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_jwt_token_security\nERROR tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_password_security\nERROR tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_session_security\nERROR tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_authorization_bypass\nERROR tests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity::test_rate_limit_bypass\nERROR tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_sensitive_data_exposure\nERROR tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_information_disclosure\nERROR tests/security/test_security_vulnerabilities.py::TestSecurityHeaders::test_security_headers_presence\nERROR tests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_penetration_testing_simulation\n================== 1 passed, 13 warnings, 14 errors in 0.59s ==================\n",
+      "stderr": "<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {
+        "created": 1753883379.1839862,
+        "duration": 0.6054747104644775,
+        "exitcode": 1,
+        "root": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1",
+        "environment": {},
+        "summary": {
+          "error": 14,
+          "passed": 1,
+          "total": 15,
+          "collected": 15
+        },
+        "collectors": [
+          {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py",
+                "type": "Module"
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_sql_injection_protection",
+                "type": "Function",
+                "lineno": 118
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_xss_protection",
+                "type": "Function",
+                "lineno": 158
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_command_injection_protection",
+                "type": "Function",
+                "lineno": 194
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_path_traversal_protection",
+                "type": "Function",
+                "lineno": 232
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_ldap_injection_protection",
+                "type": "Function",
+                "lineno": 267
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_jwt_token_security",
+                "type": "Function",
+                "lineno": 304
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_password_security",
+                "type": "Function",
+                "lineno": 366
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_session_security",
+                "type": "Function",
+                "lineno": 399
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_authorization_bypass",
+                "type": "Function",
+                "lineno": 430
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity::test_rate_limit_bypass",
+                "type": "Function",
+                "lineno": 476
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_sensitive_data_exposure",
+                "type": "Function",
+                "lineno": 534
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_information_disclosure",
+                "type": "Function",
+                "lineno": 565
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityHeaders",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityHeaders::test_security_headers_presence",
+                "type": "Function",
+                "lineno": 618
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_comprehensive_security_assessment",
+                "type": "Function",
+                "lineno": 671
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_penetration_testing_simulation",
+                "type": "Function",
+                "lineno": 712
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityHeaders",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration",
+                "type": "Class"
+              }
+            ]
+          }
+        ],
+        "tests": [
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_sql_injection_protection",
+            "lineno": 118,
+            "outcome": "error",
+            "keywords": [
+              "test_sql_injection_protection",
+              "security",
+              "TestInputValidationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.006208200007677078,
+              "outcome": "failed",
+              "crash": {
+                "path": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                "lineno": 46,
+                "message": "RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nYou can install this with:\n    $ pip install httpx"
+              },
+              "traceback": [
+                {
+                  "path": "tests\\security\\test_security_vulnerabilities.py",
+                  "lineno": 112,
+                  "message": "in api_client"
+                },
+                {
+                  "path": "nlds\\api\\__init__.py",
+                  "lineno": 304,
+                  "message": "in create_test_client"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py",
+                  "lineno": 1,
+                  "message": "in <module>"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                  "lineno": 46,
+                  "message": "in <module>"
+                }
+              ],
+              "longrepr": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx"
+            },
+            "teardown": {
+              "duration": 0.000480300048366189,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_xss_protection",
+            "lineno": 158,
+            "outcome": "error",
+            "keywords": [
+              "test_xss_protection",
+              "security",
+              "TestInputValidationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.004115699965041131,
+              "outcome": "failed",
+              "crash": {
+                "path": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                "lineno": 46,
+                "message": "RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nYou can install this with:\n    $ pip install httpx"
+              },
+              "traceback": [
+                {
+                  "path": "tests\\security\\test_security_vulnerabilities.py",
+                  "lineno": 112,
+                  "message": "in api_client"
+                },
+                {
+                  "path": "nlds\\api\\__init__.py",
+                  "lineno": 304,
+                  "message": "in create_test_client"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py",
+                  "lineno": 1,
+                  "message": "in <module>"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                  "lineno": 46,
+                  "message": "in <module>"
+                }
+              ],
+              "longrepr": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx"
+            },
+            "teardown": {
+              "duration": 0.0006146000232547522,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_command_injection_protection",
+            "lineno": 194,
+            "outcome": "error",
+            "keywords": [
+              "test_command_injection_protection",
+              "security",
+              "TestInputValidationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.00431600003503263,
+              "outcome": "failed",
+              "crash": {
+                "path": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                "lineno": 46,
+                "message": "RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nYou can install this with:\n    $ pip install httpx"
+              },
+              "traceback": [
+                {
+                  "path": "tests\\security\\test_security_vulnerabilities.py",
+                  "lineno": 112,
+                  "message": "in api_client"
+                },
+                {
+                  "path": "nlds\\api\\__init__.py",
+                  "lineno": 304,
+                  "message": "in create_test_client"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py",
+                  "lineno": 1,
+                  "message": "in <module>"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                  "lineno": 46,
+                  "message": "in <module>"
+                }
+              ],
+              "longrepr": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx"
+            },
+            "teardown": {
+              "duration": 0.00041360000614076853,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_path_traversal_protection",
+            "lineno": 232,
+            "outcome": "error",
+            "keywords": [
+              "test_path_traversal_protection",
+              "security",
+              "TestInputValidationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.004142399993725121,
+              "outcome": "failed",
+              "crash": {
+                "path": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                "lineno": 46,
+                "message": "RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nYou can install this with:\n    $ pip install httpx"
+              },
+              "traceback": [
+                {
+                  "path": "tests\\security\\test_security_vulnerabilities.py",
+                  "lineno": 112,
+                  "message": "in api_client"
+                },
+                {
+                  "path": "nlds\\api\\__init__.py",
+                  "lineno": 304,
+                  "message": "in create_test_client"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py",
+                  "lineno": 1,
+                  "message": "in <module>"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                  "lineno": 46,
+                  "message": "in <module>"
+                }
+              ],
+              "longrepr": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx"
+            },
+            "teardown": {
+              "duration": 0.0003966999938711524,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestInputValidationSecurity::test_ldap_injection_protection",
+            "lineno": 267,
+            "outcome": "error",
+            "keywords": [
+              "test_ldap_injection_protection",
+              "security",
+              "TestInputValidationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.003879200026858598,
+              "outcome": "failed",
+              "crash": {
+                "path": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                "lineno": 46,
+                "message": "RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nYou can install this with:\n    $ pip install httpx"
+              },
+              "traceback": [
+                {
+                  "path": "tests\\security\\test_security_vulnerabilities.py",
+                  "lineno": 112,
+                  "message": "in api_client"
+                },
+                {
+                  "path": "nlds\\api\\__init__.py",
+                  "lineno": 304,
+                  "message": "in create_test_client"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py",
+                  "lineno": 1,
+                  "message": "in <module>"
+                },
+                {
+                  "path": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py",
+                  "lineno": 46,
+                  "message": "in <module>"
+                }
+              ],
+              "longrepr": "..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:44: in <module>\n    import httpx\nE   ModuleNotFoundError: No module named 'httpx'\n\nDuring handling of the above exception, another exception occurred:\ntests\\security\\test_security_vulnerabilities.py:112: in api_client\n    return create_test_client()\nnlds\\api\\__init__.py:304: in create_test_client\n    from fastapi.testclient import TestClient\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\testclient.py:1: in <module>\n    from starlette.testclient import TestClient as TestClient  # noqa\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\starlette\\testclient.py:46: in <module>\n    raise RuntimeError(\nE   RuntimeError: The starlette.testclient module requires the httpx package to be installed.\nE   You can install this with:\nE       $ pip install httpx"
+            },
+            "teardown": {
+              "duration": 0.0004390000249259174,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_jwt_token_security",
+            "lineno": 304,
+            "outcome": "error",
+            "keywords": [
+              "test_jwt_token_security",
+              "security",
+              "TestAuthenticationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0004800999886356294,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 305\n      def test_jwt_token_security(self, security_framework):\nE       fixture 'security_framework' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:305"
+            },
+            "teardown": {
+              "duration": 0.00040439999429509044,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_password_security",
+            "lineno": 366,
+            "outcome": "error",
+            "keywords": [
+              "test_password_security",
+              "security",
+              "TestAuthenticationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0004743000026792288,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 367\n      def test_password_security(self, security_framework):\nE       fixture 'security_framework' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:367"
+            },
+            "teardown": {
+              "duration": 0.00032300001475960016,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_session_security",
+            "lineno": 399,
+            "outcome": "error",
+            "keywords": [
+              "test_session_security",
+              "security",
+              "TestAuthenticationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.00043180002830922604,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 400\n      def test_session_security(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:400"
+            },
+            "teardown": {
+              "duration": 0.00033569999504834414,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestAuthenticationSecurity::test_authorization_bypass",
+            "lineno": 430,
+            "outcome": "error",
+            "keywords": [
+              "test_authorization_bypass",
+              "security",
+              "TestAuthenticationSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.00043130002450197935,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 431\n      def test_authorization_bypass(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:431"
+            },
+            "teardown": {
+              "duration": 0.000338299956638366,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestRateLimitingSecurity::test_rate_limit_bypass",
+            "lineno": 476,
+            "outcome": "error",
+            "keywords": [
+              "test_rate_limit_bypass",
+              "security",
+              "TestRateLimitingSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0005298000178299844,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 477\n      def test_rate_limit_bypass(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:477"
+            },
+            "teardown": {
+              "duration": 0.0003885000478476286,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_sensitive_data_exposure",
+            "lineno": 534,
+            "outcome": "error",
+            "keywords": [
+              "test_sensitive_data_exposure",
+              "security",
+              "TestDataProtectionSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0004256999818608165,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 535\n      def test_sensitive_data_exposure(self, api_client, auth_headers, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:535"
+            },
+            "teardown": {
+              "duration": 0.0003241999656893313,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestDataProtectionSecurity::test_information_disclosure",
+            "lineno": 565,
+            "outcome": "error",
+            "keywords": [
+              "test_information_disclosure",
+              "security",
+              "TestDataProtectionSecurity",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0004130000015720725,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 566\n      def test_information_disclosure(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:566"
+            },
+            "teardown": {
+              "duration": 0.00029960001120343804,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityHeaders::test_security_headers_presence",
+            "lineno": 618,
+            "outcome": "error",
+            "keywords": [
+              "test_security_headers_presence",
+              "security",
+              "TestSecurityHeaders",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0004208000027574599,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 619\n      def test_security_headers_presence(self, api_client, security_framework):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:619"
+            },
+            "teardown": {
+              "duration": 0.0003200999926775694,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_comprehensive_security_assessment",
+            "lineno": 671,
+            "outcome": "passed",
+            "keywords": [
+              "test_comprehensive_security_assessment",
+              "security",
+              "pytestmark",
+              "TestSecurityIntegration",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.0005327000399120152,
+              "outcome": "passed"
+            },
+            "call": {
+              "duration": 0.0009825999732129276,
+              "outcome": "passed",
+              "stdout": "\nSecurity Assessment Summary:\nRisk Score: 0.0/10\nTests Passed: 0\nTests Failed: 0\nVulnerabilities Found: 0\nCritical Issues: 0\nHigh Issues: 0\nMedium Issues: 0\nLow Issues: 0\n"
+            },
+            "teardown": {
+              "duration": 0.000298099999781698,
+              "outcome": "passed"
+            }
+          },
+          {
+            "nodeid": "tests/security/test_security_vulnerabilities.py::TestSecurityIntegration::test_penetration_testing_simulation",
+            "lineno": 712,
+            "outcome": "error",
+            "keywords": [
+              "test_penetration_testing_simulation",
+              "slow",
+              "security",
+              "pytestmark",
+              "TestSecurityIntegration",
+              "tests/security/test_security_vulnerabilities.py",
+              "v2.1.1"
+            ],
+            "setup": {
+              "duration": 0.00042729999404400587,
+              "outcome": "failed",
+              "longrepr": "file C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py, line 713\n      @pytest.mark.security\n      @pytest.mark.slow\n      def test_penetration_testing_simulation(self, api_client):\nE       fixture 'api_client' not found\n>       available fixtures: analysis_orchestrator, anyio_backend, anyio_backend_name, anyio_backend_options, assert_async_timing, assert_timing, auth_service, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_after_session, cleanup_after_test, doctest_namespace, event_loop, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, include_metadata_in_junit_xml, integration_orchestrator, json_metadata, json_validator, malicious_inputs, metadata, mock_amasiap_engine, mock_database, mock_github_interface, mock_http_client, mock_jaegis_interface, mock_openrouter_engine, mock_websocket, mocker, module_mocker, monitoring_system, monkeypatch, package_mocker, performance_timer, processing_orchestrator, pytestconfig, rate_limiter, record_property, record_testsuite_property, record_xml_attribute, recwarn, sample_admin_user, sample_analysis_result, sample_config, sample_enhanced_input, sample_input_text, sample_jaegis_command, sample_user, security_headers, session_mocker, temp_dir, temp_file, test_app, test_client, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, translation_orchestrator, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\nC:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\tests\\security\\test_security_vulnerabilities.py:713"
+            },
+            "teardown": {
+              "duration": 0.0005629000370390713,
+              "outcome": "passed"
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "message": "Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py",
+            "lineno": 1093
+          },
+          {
+            "message": "Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py",
+            "lineno": 82
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Valid config keys have changed in V2:\n* 'schema_extra' has been renamed to 'json_schema_extra'",
+            "category": "UserWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 373
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py",
+            "lineno": 667
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py",
+            "lineno": 4495
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 167
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 180
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 193
+          }
+        ]
+      },
+      "timestamp": "2025-07-30T13:49:39.368151"
+    },
+    "acceptance": {
+      "success": false,
+      "duration": 2.4286532402038574,
+      "return_code": 5,
+      "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.13.3, pytest-7.4.3, pluggy-1.6.0 -- C:\\Python313\\python.exe\ncachedir: .pytest_cache\nmetadata: {'Python': '3.13.3', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '7.4.3', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.9.0', 'asyncio': '0.21.1', 'json-report': '1.5.0', 'metadata': '3.1.1', 'mock': '3.12.0', 'timeout': '2.2.0'}, 'JAVA_HOME': 'C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-21.0.7.6-hotspot\\\\'}\nrootdir: C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\nplugins: anyio-4.9.0, asyncio-0.21.1, json-report-1.5.0, metadata-3.1.1, mock-3.12.0, timeout-2.2.0\nasyncio: mode=Mode.STRICT\ntimeout: 1200.0s\ntimeout method: thread\ntimeout func_only: False\ncollecting ... collected 3 items / 3 deselected / 0 selected\n\n============================== warnings summary ===============================\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py:1093: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warn(\n\nnlds\\api\\models.py:82\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py:82: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    @validator('input_text')\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py:373: UserWarning: Valid config keys have changed in V2:\n  * 'schema_extra' has been renamed to 'json_schema_extra'\n    warnings.warn(message, UserWarning)\n\nnlds\\api\\main.py:667\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py:667: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    @app.on_event(\"startup\")\n\n..\\..\\..\\..\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495\n  C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py:4495: DeprecationWarning: \n          on_event is deprecated, use lifespan event handlers instead.\n  \n          Read more about it in the\n          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n          \n    return self.router.on_event(event_type)\n\nnlds\\api\\auth.py:167\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:167: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:180\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:180: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\nnlds\\api\\auth.py:193\n  C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py:193: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n    created_at=datetime.utcnow(),\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: test_reports/acceptance_report.json\n===================== 3 deselected, 13 warnings in 0.02s ======================\n",
+      "stderr": "<sys>:0: RuntimeWarning: coroutine 'get_rate_limiter' was never awaited\n",
+      "test_data": {
+        "created": 1753883381.663947,
+        "duration": 0.03353762626647949,
+        "exitcode": 5,
+        "root": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1",
+        "environment": {},
+        "summary": {
+          "total": 0,
+          "collected": 3,
+          "deselected": 3
+        },
+        "collectors": [
+          {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py",
+                "type": "Module"
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/acceptance/test_user_acceptance.py::TestBusinessUserAcceptance",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestBusinessUserAcceptance::test_business_user_scenarios",
+                "type": "Function",
+                "lineno": 273,
+                "deselected": true
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/acceptance/test_user_acceptance.py::TestTechnicalUserAcceptance",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestTechnicalUserAcceptance::test_technical_user_scenarios",
+                "type": "Function",
+                "lineno": 494,
+                "deselected": true
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/acceptance/test_user_acceptance.py::TestEndToEndUserAcceptance",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestEndToEndUserAcceptance::test_comprehensive_user_acceptance",
+                "type": "Function",
+                "lineno": 612,
+                "deselected": true
+              }
+            ]
+          },
+          {
+            "nodeid": "tests/acceptance/test_user_acceptance.py",
+            "outcome": "passed",
+            "result": [
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestBusinessUserAcceptance",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestTechnicalUserAcceptance",
+                "type": "Class"
+              },
+              {
+                "nodeid": "tests/acceptance/test_user_acceptance.py::TestEndToEndUserAcceptance",
+                "type": "Class"
+              }
+            ]
+          }
+        ],
+        "tests": [],
+        "warnings": [
+          {
+            "message": "Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'example'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\fields.py",
+            "lineno": 1093
+          },
+          {
+            "message": "Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\models.py",
+            "lineno": 82
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Valid config keys have changed in V2:\n* 'schema_extra' has been renamed to 'json_schema_extra'",
+            "category": "UserWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 373
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/",
+            "category": "PydanticDeprecatedSince20",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\pydantic\\_internal\\_config.py",
+            "lineno": 323
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\main.py",
+            "lineno": 667
+          },
+          {
+            "message": "\n        on_event is deprecated, use lifespan event handlers instead.\n\n        Read more about it in the\n        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).\n        ",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\AppData\\Roaming\\Python\\Python313\\site-packages\\fastapi\\applications.py",
+            "lineno": 4495
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 167
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 180
+          },
+          {
+            "message": "datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).",
+            "category": "DeprecationWarning",
+            "when": "config",
+            "filename": "C:\\Users\\Lenovo ThinkPad T480\\Desktop\\JAEGIS\\JAEGIS-METHOD-v2.0\\v2.1.1\\nlds\\api\\auth.py",
+            "lineno": 193
+          }
+        ]
+      },
+      "timestamp": "2025-07-30T13:49:41.811833"
+    }
+  },
+  "quality_metrics": {
+    "integration_test_success": 0
+  },
+  "quality_gates": {
+    "unit_test_coverage": 90.0,
+    "integration_test_success": 95.0,
+    "performance_p95_response_time": 500.0,
+    "confidence_accuracy_rate": 85.0,
+    "security_risk_score": 5.0,
+    "user_acceptance_satisfaction": 4.0
+  },
+  "overall_status": "FAILED"
+}
